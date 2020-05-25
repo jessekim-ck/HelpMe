@@ -19,20 +19,20 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Navbar expand="lg">
-                    <Navbar.Brand href="/">HelpME</Navbar.Brand>
+                    <Navbar.Brand href="/help_me/">HelpME</Navbar.Brand>
                     <Navbar.Collapse>
                         <Nav className="mr-auto">
-                            <Nav.Link href="/help_me">Help Me</Nav.Link>
-                            <Nav.Link href="/help_him">Help Him</Nav.Link>
+                            <Nav.Link href="/help_me/help_me">Help Me</Nav.Link>
+                            <Nav.Link href="/help_me/help_him">Help Him</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="/my_page">My Page</Nav.Link>
+                            <Nav.Link href="/help_me/my_page">My Page</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
     
                 <div className="app-container">
-                    <Router>
+                    <Router basename="help_me">
                         <Switch>
                             <Route exact path="/" component={Index}/>
                             <Route path="/help_me" component={HelpMe}/>
